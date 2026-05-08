@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>FinOps & Infrastructure Efficiency Assessment | Hisham Ahmad</title>
+
+  <meta
+    name="description"
+    content="Enterprise assessment framework for evaluating FinOps maturity, infrastructure efficiency, operational governance, and optimization opportunities."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="/" class="brand-link">
+      <span class="brand-white">Hisham</span>
+      <span class="brand-blue">Ahmad</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#overview">Overview</a>
+      <a href="#why">Why It Matters</a>
+      <a href="#focus">Focus Areas</a>
+      <a href="#assessment">Assessment</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <span class="badge-top">Enterprise Advisory Framework</span>
+
+    <h1>FinOps & Infrastructure Efficiency Assessment</h1>
+
+    <p>
+      Evaluate infrastructure cost visibility, operational maturity, governance readiness,
+      workload efficiency, hidden licensing exposure, and optimization opportunities across
+      on-premise, hybrid, and cloud environments.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#overview" class="btn btn-primary">Explore Assessment Scope</a>
+      <a href="#assessment" class="btn btn-secondary">Start Assessment</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section id="overview">
+    <div class="domain-header">
+      <h2>Overview</h2>
+      <div class="domain-line"></div>
+    </div>
+
+    <p class="section-intro">
+      This assessment provides a business-friendly view of infrastructure efficiency and FinOps maturity.
+      It helps identify where cost leakage may happen through low utilization, lack of governance,
+      manual operations, always-on non-production workloads, inefficient storage practices, and hidden
+      licensing dependencies.
+    </p>
+  </section>
+
+  <section id="why">
+    <div class="domain-header">
+      <h2>Why This Matters</h2>
+      <div class="domain-line"></div>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Identify Cost Leakage</h3>
+        <p>
+          Infrastructure waste often comes from oversized resources, always-on workloads,
+          underused environments, unmanaged storage growth, and weak cost visibility.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Improve Governance</h3>
+        <p>
+          Budget controls, tagging, alerts, ownership, and centralized reporting are key
+          to making infrastructure spending more predictable and accountable.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Prioritize Quick Wins</h3>
+        <p>
+          The assessment highlights practical optimization areas such as rightsizing,
+          non-production scheduling, storage lifecycle management, and licensing review.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Support Executive Discussion</h3>
+        <p>
+          Results are written in business and advisory language, making them suitable for
+          management discussion, discovery workshops, and cloud strategy planning.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="focus">
+    <div class="domain-header">
+      <h2>Focus Areas</h2>
+      <div class="domain-line"></div>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Cost Visibility & Governance</h3>
+        <p>
+          Measures how well infrastructure spending is tracked, reported, alerted, and governed
+          across cloud and on-premise environments.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Infrastructure Rightsizing</h3>
+        <p>
+          Reviews utilization patterns and workload footprint to identify overprovisioning
+          and efficiency improvement opportunities.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Operational Automation</h3>
+        <p>
+          Evaluates provisioning speed, deployment automation, non-production scheduling,
+          and manual operational effort.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Licensing & Storage Efficiency</h3>
+        <p>
+          Identifies hidden TCO pressure from enterprise software licensing, backup retention,
+          and unmanaged storage growth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="assessment">
+    <div class="domain-header">
+      <h2>Interactive Assessment</h2>
+      <div class="domain-line"></div>
+    </div>
+
+    <p class="section-intro">
+      Complete the questions below to generate a directional FinOps maturity score, estimated
+      waste exposure, financial impact range, and recommended optimization areas.
+    </p>
+
+    <div class="assessment-container">
+      <form id="finopsForm">
+
+        <div class="question-group">
+          <h3>01. Environment & Workload Profile</h3>
+
+          <div class="field-grid">
+            <div class="field">
+              <label>
+                What type of workload is being assessed?
+                <span class="info-tip" data-tip="Production, Dev/Test, and DR environments require different optimization strategies.">i</span>
+              </label>
+              <select name="workloadType" data-domain="workload">
+                <option value="">Select</option>
+                <option value="score:12,waste:18,area:production">Production</option>
+                <option value="score:6,waste:35,area:scheduling">Development / Test</option>
+                <option value="score:8,waste:28,area:storage">Disaster Recovery (DR)</option>
+                <option value="score:7,waste:30,area:mixed">Mixed Environment</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>
+                What is your current primary infrastructure platform?
+                <span class="info-tip" data-tip="This helps identify whether optimization should focus on on-premise, cloud, or hybrid operating models.">i</span>
+              </label>
+              <select name="platform" data-domain="platform">
+                <option value="">Select</option>
+                <option value="score:6,waste:32,area:rightsizing">On-Premise</option>
+                <option value="score:5,waste:36,area:licensing">VMware</option>
+                <option value="score:10,waste:26,area:governance">AWS</option>
+                <option value="score:10,waste:26,area:governance">Microsoft Azure</option>
+                <option value="score:14,waste:20,area:governance">Google Cloud</option>
+                <option value="score:8,waste:34,area:governance">Hybrid / Multi-Cloud</option>
+                <option value="score:4,waste:38,area:visibility">Information Not Readily Available</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>
+                What is the approximate monthly infrastructure spend?
+                <span class="info-tip" data-tip="This provides a baseline to estimate directional annual waste exposure and optimization potential.">i</span>
+              </label>
+              <select name="monthlySpend" data-financial="spend">
+                <option value="">Select</option>
+                <option value="spend:5000,score:8,waste:18">Below RM 10k</option>
+                <option value="spend:30000,score:8,waste:22">RM 10k – RM 50k</option>
+                <option value="spend:150000,score:7,waste:28">RM 50k – RM 250k</option>
+                <option value="spend:625000,score:6,waste:32">RM 250k – RM 1M</option>
+                <option value="spend:1200000,score:5,waste:36">Above RM 1M</option>
+                <option value="spend:0,score:3,waste:34,unknown:true">Requires Further Assessment</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <h3>02. Infrastructure Footprint & Utilization</h3>
+
+          <div class="field-grid">
+            <div class="field">
+              <label>
+                How many active servers or virtual machines are currently running?
+                <span class="info-tip" data-tip="The number of workloads helps estimate the scale of rightsizing and automation opportunities.">i</span>
+              </label>
+              <select name="vmCount" data-domain="compute">
+                <option value="">Select</option>
+                <option value="score:14,waste:14,area:rightsizing">Below 10</option>
+                <option value="score:11,waste:22,area:rightsizing">10 – 50</option>
+                <option value="score:8,waste:30,area:rightsizing">50 – 200</option>
+                <option value="score:6,waste:36,area:rightsizing">200 – 1000</option>
+                <option value="score:5,waste:42,area:rightsizing">Above 1000</option>
+                <option value="score:4,waste:34,area:visibility">Information Not Readily Available</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>
+                What is the estimated average CPU utilization?
+                <span class="info-tip" data-tip="Low CPU utilization is one of the strongest indicators of oversized infrastructure.">i</span>
+              </label>
+              <select name="utilization" data-domain="compute">
+                <option value="">Select</option>
+                <option value="score:2,waste:45,area:rightsizing">Below 20%</option>
+                <option value="score:7,waste:34,area:rightsizing">20% – 40%</option>
+                <option value="score:12,waste:22,area:rightsizing">40% – 60%</option>
+                <option value="score:15,waste:12,area:optimization">Above 60%</option>
+                <option value="score:4,waste:38,area:visibility">Information Not Readily Available</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>
+                Are non-production environments running 24x7?
+                <span class="info-tip" data-tip="Always-on Dev/Test workloads are often a major source of avoidable infrastructure cost.">i</span>
+              </label>
+              <select name="nonProd" data-domain="automation">
+                <option value="">Select</option>
+                <option value="score:3,waste:42,area:scheduling">Yes, most run 24x7</option>
+                <option value="score:8,waste:28,area:scheduling">Partially</option>
+                <option value="score:15,waste:12,area:scheduling">No, scheduling is applied</option>
+                <option value="score:5,waste:34,area:visibility">Information Not Readily Available</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <h3>03. Cost Visibility & Governance</h3>
+
+          <div class="field-grid">
+            <div class="field">
+              <label>
+                How well can your organization track infrastructure or cloud spending across environments?
+                <span class="info-tip" data-tip="This includes on-premise cost, cloud billing, licensing, backup, network, and operational expenses.">i</span>
+              </label>
+              <select name="visibility" data-domain="governance">
+                <option value="">Select</option>
+                <option value="score:16,waste:10,area:visibility">Fully visible with centralized reporting and alerts</option>
+                <option value="score:10,waste:22,area:visibility">Partial visibility across some systems</option>
+                <option value="score:5,waste:34,area:visibility">Limited visibility with manual tracking</option>
+                <option value="score:2,waste:44,area:visibility">No centralized cost visibility</option>
+                <option value="score:4,waste:38,area:visibility">Information Not Readily Available</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>
+                Do you currently use automated budget alerts or cost governance policies?
+                <span class="info-tip" data-tip="Budget alerts and policy controls help detect overspend before it becomes a major issue.">i</span>
+              </label>
+              <select name="budget" data-domain="governance">
+                <option value="">Select</option>
+                <option value="score:16,waste:10,area:governance">Yes, fully implemented</option>
+                <option value="score:10,waste:24,area:governance">Partially implemented</option>
+                <option value="score:5,waste:34,area:governance">Planning stage</option>
+                <option value="score:2,waste:44,area:governance">No</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>
+                How often are unused or oversized resources reviewed and optimized?
+                <span class="info-tip" data-tip="Regular rightsizing reviews reduce waste from oversized or abandoned infrastructure.">i</span>
+              </label>
+              <select name="rightsizing" data-domain="governance">
+                <option value="">Select</option>
+                <option value="score:16,waste:10,area:rightsizing">Monthly or more frequently</option>
+                <option value="score:11,waste:22,area:rightsizing">Quarterly</option>
+                <option value="score:6,waste:34,area:rightsizing">Rarely</option>
+                <option value="score:2,waste:44,area:rightsizing">Never</option>
+                <option value="score:4,waste:38,area:visibility">Information Not Readily Available</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <h3>04. Storage, Backup & Licensing</h3>
+
+          <div class="field-grid">
+            <div class="field">
+              <label>
+                What is the estimated storage footprint?
+                <span class="info-tip" data-tip="Storage size and growth affect backup cost, lifecycle policy, retention cost, and long-term TCO.">i</span>
+              </label>
+              <select name="storage" data-domain="storage">
+                <option value="">Select</option>
+                <option value="score:14,waste:12,area:storage">Below 5 TB</option>
+                <option value="score:11,waste:22,area:storage">5 – 20 TB</option>
+                <option value="score:8,waste:30,area:storage">20 – 100 TB</option>
+                <option value="score:5,waste:40,area:storage">Above 100 TB</option>
+                <option value="score:4,waste:34,area:visibility">Information Not Readily Available</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>
+                How long are backups retained?
+                <span class="info-tip" data-tip="Long backup retention can significantly increase storage cost when lifecycle policies are not optimized.">i</span>
+              </label>
+              <select name="retention" data-domain="storage">
+                <option value="">Select</option>
+                <option value="score:14,waste:12,area:storage">Below 30 days</option>
+                <option value="score:11,waste:20,area:storage">30 – 90 days</option>
+                <option value="score:8,waste:30,area:storage">90 – 365 days</option>
+                <option value="score:5,waste:42,area:storage">More than 1 year</option>
+                <option value="score:4,waste:34,area:visibility">Information Not Readily Available</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>
+                Which enterprise software licenses are heavily used?
+                <span class="info-tip" data-tip="Windows Server, SQL Server, Oracle, VMware, and similar platforms can be major hidden TCO drivers.">i</span>
+              </label>
+              <select name="licensing" data-domain="licensing">
+                <option value="">Select</option>
+                <option value="score:7,waste:32,area:licensing">Windows Server</option>
+                <option value="score:5,waste:40,area:licensing">Microsoft SQL Server</option>
+                <option value="score:4,waste:45,area:licensing">Oracle Database</option>
+                <option value="score:5,waste:42,area:licensing">VMware</option>
+                <option value="score:14,waste:14,area:licensing">Mostly Open Source</option>
+                <option value="score:8,waste:34,area:licensing">Mixed Environment</option>
+                <option value="score:4,waste:36,area:visibility">Information Not Readily Available</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <h3>05. Automation & Operational Maturity</h3>
+
+          <div class="field-grid">
+            <div class="field">
+              <label>
+                How long does it typically take to provision a new infrastructure environment or application platform?
+                <span class="info-tip" data-tip="Provisioning speed indicates automation maturity and operational agility.">i</span>
+              </label>
+              <select name="provisioning" data-domain="automation">
+                <option value="">Select</option>
+                <option value="score:16,waste:10,area:automation">Minutes</option>
+                <option value="score:13,waste:16,area:automation">Hours</option>
+                <option value="score:9,waste:26,area:automation">Days</option>
+                <option value="score:5,waste:36,area:automation">Weeks</option>
+                <option value="score:2,waste:46,area:automation">Months</option>
+                <option value="score:4,waste:38,area:visibility">Information Not Readily Available</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>
+                How automated is your deployment process?
+                <span class="info-tip" data-tip="Manual deployment increases operational effort, inconsistency, and hidden delivery cost.">i</span>
+              </label>
+              <select name="deployment" data-domain="automation">
+                <option value="">Select</option>
+                <option value="score:16,waste:10,area:automation">Fully automated CI/CD</option>
+                <option value="score:11,waste:22,area:automation">Partial automation</option>
+                <option value="score:5,waste:36,area:automation">Mostly manual</option>
+                <option value="score:2,waste:44,area:automation">Fully manual</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>
+                What level of monitoring and observability is implemented?
+                <span class="info-tip" data-tip="Monitoring and observability help detect issues, waste, performance bottlenecks, and operational blind spots.">i</span>
+              </label>
+              <select name="observability" data-domain="observability">
+                <option value="">Select</option>
+                <option value="score:16,waste:10,area:observability">Full centralized observability</option>
+                <option value="score:10,waste:24,area:observability">Basic infrastructure monitoring</option>
+                <option value="score:5,waste:36,area:observability">Limited monitoring</option>
+                <option value="score:2,waste:44,area:observability">Reactive monitoring only</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <h3>06. Confidence Level</h3>
+
+          <div class="field-grid">
+            <div class="field full-width">
+              <label>
+                How confident are you with the answers provided?
+                <span class="info-tip" data-tip="Low confidence usually indicates the need for a deeper infrastructure discovery and visibility assessment.">i</span>
+              </label>
+              <select name="confidence" data-domain="confidence">
+                <option value="">Select</option>
+                <option value="score:12,waste:10,area:optimization">High Confidence</option>
+                <option value="score:8,waste:22,area:visibility">Moderate Confidence</option>
+                <option value="score:4,waste:38,area:visibility">Limited Visibility</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-bar">
+          <button type="button" class="btn btn-primary" onclick="calculateFinOps()">Generate Assessment</button>
+          <button type="button" class="btn btn-secondary" onclick="resetFinOps()">Reset</button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <section id="results" class="results-dashboard">
+    <div class="glass-card">
+      <div class="results-grid">
+
+        <div class="score-card">
+          <p class="eyebrow-result">FinOps Maturity Score</p>
+          <h2 class="big-score" id="scoreValue">0%</h2>
+
+          <div id="statusBadge" class="status-badge">Pending</div>
+
+          <p class="summary-text" id="scoreSummary">
+            Complete the assessment to generate executive insights.
+          </p>
+
+          <div class="financial-impact-card">
+            <p class="eyebrow-result">Estimated Financial Impact</p>
+
+            <div class="impact-line">
+              <span>Annual Infrastructure Baseline</span>
+              <strong id="annualBaseline">Requires Assessment</strong>
+            </div>
+
+            <div class="impact-line">
+              <span>Estimated Waste Exposure</span>
+              <strong id="wasteValue">Requires Assessment</strong>
+            </div>
+
+            <div class="impact-line">
+              <span>Potential Optimization Range</span>
+              <strong id="optimizationRange">0% – 0%</strong>
+            </div>
+
+            <p class="disclaimer">
+              Financial figures are directional estimates for advisory purposes only and should be validated
+              through detailed infrastructure discovery.
+            </p>
+          </div>
+
+          <div class="domain-breakdown">
+            <div class="domain-bar-container">
+              <div class="domain-bar-label">
+                <span>Optimization Readiness</span>
+                <span id="readinessPercent">0%</span>
+              </div>
+              <div class="domain-bar-track">
+                <div id="readinessBar" class="domain-bar-fill"></div>
+              </div>
+            </div>
+
+            <div class="domain-bar-container">
+              <div class="domain-bar-label">
+                <span>Estimated Waste Exposure</span>
+                <span id="wastePercent">0%</span>
+              </div>
+              <div class="domain-bar-track">
+                <div id="wasteBar" class="domain-bar-fill waste-bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="insights-column">
+          <div class="panel-block">
+            <h3>Executive Summary</h3>
+            <p id="executiveSummary"></p>
+          </div>
+
+          <div class="panel-block">
+            <h4>Recommended Optimization Areas</h4>
+            <div id="optimizationAreas" class="priority-grid"></div>
+          </div>
+
+          <div class="panel-block">
+            <h4>Top 3 Immediate Priorities</h4>
+            <ol id="priorityList" class="priority-list"></ol>
+          </div>
+
+          <div class="panel-block">
+            <h4>Suggested Next Action Plan</h4>
+            <p id="nextActionText"></p>
+          </div>
+
+          <div class="action-row">
+            <button class="btn btn-secondary" onclick="window.print()">Print / Save PDF</button>
+            <a
+              class="btn btn-primary"
+              href="mailto:mohd.hisham@outlook.my?subject=FinOps%20%26%20Infrastructure%20Efficiency%20Consultation"
+            >
+              Book 15-Minute Advisory Session
+            </a>
+            <button class="btn btn-secondary" onclick="resetFinOps()">Reset</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Hisham Ahmad Advisory. Prepared for FinOps and infrastructure efficiency assessment.
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
